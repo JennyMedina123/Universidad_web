@@ -1,0 +1,33 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de alumno</h3>
+    <form (ngSubmit)= "onSubmit()">
+        <div class="form-grupo">
+            <label>Nombre alumno :</label>
+            <input type="text"
+            class="form-control"
+            id= "nombre"
+            [(ngModel)] = "alumno.nombre"
+            name= "nombrealumno"
+            >
+        </div>
+        <div class="form-grupo">
+            <label>Fecha Nacimiento :</label>
+            <input type="text"
+            class="form-control"
+            id= "fecha Nacimiento"
+            [(ngModel)] = "alumno.fechaNacimiento"
+            name= "fecha_nacimiento"
+            >
+        </div>
+        <div class="form-grupo">
+            <label>Telefono :</label>
+            <input type="text"
+            class="form-control"
+            id= "telefono"
+            [(ngModel)] = "alumno.telefono"
+            name= "telefono"
+            >
+        </div>
+        <button class="btn btn-success">Guardar</button>
+    </form>
+</div>    

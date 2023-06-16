@@ -1,0 +1,22 @@
+<h2>lista alumnos </h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>fecha nacimiento</th>
+            <th>nombre Alumno</th>
+            <th>telefono</th>
+        </tr>
+    </thead>
+    <tbody>   
+        <tr *ngFor= "let alumno of alumnos">  
+           <td>{{alumno.fecha_Nacimiento}}</td>
+           <td>{{alumno.nombreAlumno}}</td>
+           <td>{{alumno.telefono}}</td> 
+            <td>
+                <button (click)="actualizarAlumno(alumno.idAlumno)" class="btn btn-info">Editar</button>
+                <button (click)="eliminarAlumno(alumno.idAlumno)" class="btn btn-danger" style="margin-left : 10px;">Eliminar</button>
+                <button (click)="verDetallesDelAlumno(alumno.idAlumno)" class="btn btn-primary" style="margin-left : 10px;">Detalles</button>
+            </td>   
+        </tr>
+     </tbody>      
+</table>    
