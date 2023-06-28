@@ -8,7 +8,7 @@ import { Alumnos, Alumno } from './alumnos';
 })
 export class AlumnoService {
 
-  // esta URL obtiene el listado de todos los empleados en el backend
+  // esta URL obtiene el listado de todos los alumnos en el backend
   private baseURL="http://localhost:8080/alumnos/";
 
   constructor( private httpClient : HttpClient) { }
@@ -17,7 +17,7 @@ export class AlumnoService {
   obtenerListaDeAlumnos():Observable<Alumnos[]>{
     return this.httpClient.get<Alumnos[]>(`${this.baseURL}listar`);
   }
-// este metodo sirve para registrar un empleado
+// este metodo sirve para registrar un alumno
   registrarAlumno(alumno:Alumno) : Observable<Object>{
     return this.httpClient.post(`${this.baseURL}`, alumno)
   }
@@ -30,5 +30,11 @@ export class AlumnoService {
   verDetallesDelAlumno(id:number):Observable<Object>{
     return this.httpClient.get(`${this.baseURL}${id}`);
 
+  
+  }
+
+  //este metodo sirve para actualizar el alumno
+  actualizarAlumno(alumno:any) : Observable<Object>{
+    return this.httpClient.put(`${this.baseURL}`,alumno);
   }
 }

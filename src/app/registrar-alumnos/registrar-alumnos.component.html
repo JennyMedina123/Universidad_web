@@ -1,23 +1,56 @@
 <div class="col-md-6 offset-md-3">
     <h3 class="text-center">Registro de alumno</h3>
-    <form (ngSubmit)= "onSubmit()">
+    <form (ngSubmit)= "onSubmit()" #alumnoform = "ngForm">
         <div class="form-grupo">
             <label>Nombre alumno :</label>
             <input type="text"
             class="form-control"
-            id= "nombre"
+            id= "nombreAlumno"
             [(ngModel)] = "alumno.nombre"
-            name= "nombrealumno"
+            name= "nombreAlumno"
+            required
+            minlength="4"
+            maxlength="100"
+            placeholder="Digite su nombre"
+            #nombre = "ngModel"
             >
+        <div class="alert alert-danger" *ngIf= "nombre.invalid && (nombre.dirty || nombre.touched)">
+        <div *ngIf= "nombre.errors.required">
+            Digite su nombre por favor
         </div>
+        <div *ngIf= "nombre.errors.minlength">
+            El nombre tiene que contener como minimo 4 caracteres
+        </div>
+        <div *ngIf= "nombre.errors.maxlength">
+            El nombre tiene que tener como maximo 100 caracteres
+        </div>
+        </div>
+    </div>
+
         <div class="form-grupo">
             <label>Fecha Nacimiento :</label>
             <input type="text"
             class="form-control"
-            id= "fecha Nacimiento"
+            id= "fecha-Nacimiento"
             [(ngModel)] = "alumno.fechaNacimiento"
-            name= "fecha_nacimiento"
+            name= "fechaNacimiento"
+            required
+            minlength="4"
+            maxlength="10"
+            placeholder="Digite su fecha de Nacimiento"
+            #fechaNacimiento = "ngModel"
             >
+            <div class="alert alert-danger" *ngIf= "fechaNacimiento.invalid && (fechaNacimiento.dirty || fechaNacimiento.touched)">
+                <div *ngIf= "fechaNacimiento.errors.required">
+                    Digite su fechaNacimiento por favor
+                </div>
+                <div *ngIf= "fechaNacimiento.errors.minlength">
+                    La fechaNacimiento tiene que contener como minimo 4 caracteres
+                </div>
+                <div *ngIf= "fechaNacimiento.errors.maxlength">
+                    La fechaNacimiento tiene que tener como maximo 10 caracteres
+                </div>
+                </div>
         </div>
         <div class="form-grupo">
             <label>Telefono :</label>
@@ -26,8 +59,22 @@
             id= "telefono"
             [(ngModel)] = "alumno.telefono"
             name= "telefono"
+            required
+            placeholder="Digite su telefono"
+            #telefono = "ngModel"
             >
+            <div class="alert alert-danger" *ngIf= "telefono.invalid && (telefono.dirty || telefono.touched)">
+                <div *ngIf= "telefono.errors.required">
+                    Digite su telefono por favor
+                </div>
+                <div *ngIf= "telefono.errors.minlength">
+                    El telefono tiene que contener como minimo 4 caracteres
+                </div>
+                <div *ngIf= "telefono.errors.maxlength">
+                    El telefono tiene que tener como maximo 10 caracteres
+                </div>
+                </div>
         </div>
-        <button class="btn btn-success">Guardar</button>
+        <button class="btn btn-success" [disabled]= "!alumnoform.form.valid">Guardar</button>
     </form>
 </div>    

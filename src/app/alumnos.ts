@@ -1,17 +1,14 @@
 export class Alumnos {
 
-    idAlumno:number;
+    numMatricula:number;
     telefono:string;
-    fecha_Nacimiento:string;
+    fechaNacimiento:string;
     nombreAlumno:string;
-    
-
-    
 }
 
 export class Alumno {
 
-    id:number;
+    numMatricula:number;
     telefono:string;
     fechaNacimiento:string;
     nombre:string;

@@ -6,7 +6,7 @@ import { ListaAlumnosComponent } from './lista-alumnos/lista-alumnos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrarAlumnosComponent } from './registrar-alumnos/registrar-alumnos.component';
 import { FormsModule } from '@angular/forms';
-import { ActualizarAlumnosComponent } from './actualizar-alumnos/actualizar-alumnos.component';
+import { ActualizarAlumnoComponent } from './actualizar-alumnos/actualizar-alumnos.component';
 import { AlumnoDetallesComponent } from './alumno-detalles/alumno-detalles.component';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { AlumnoDetallesComponent } from './alumno-detalles/alumno-detalles.compo
     AppComponent,
     ListaAlumnosComponent,
     RegistrarAlumnosComponent,
-    ActualizarAlumnosComponent,
+    ActualizarAlumnoComponent,
     AlumnoDetallesComponent
   ],
   imports: [

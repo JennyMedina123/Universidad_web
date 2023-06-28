@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ActualizarAlumnosComponent } from './actualizar-alumnos.component';
+import { ActualizarAlumnoComponent } from './actualizar-alumnos.component';
 
-describe('ActualizarAlumnosComponent', () => {
-  let component: ActualizarAlumnosComponent;
-  let fixture: ComponentFixture<ActualizarAlumnosComponent>;
+describe('ActualizarAlumnoComponent', () => {
+  let component: ActualizarAlumnoComponent;
+  let fixture: ComponentFixture<ActualizarAlumnoComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ActualizarAlumnosComponent]
+      declarations: [ActualizarAlumnoComponent]
     });
-    fixture = TestBed.createComponent(ActualizarAlumnosComponent);
+    fixture = TestBed.createComponent(ActualizarAlumnoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
